@@ -23,12 +23,14 @@ public class Complaints implements FlatMaintanance
     public String logComplaint(){
         return complaint;
     }
+    public Long getId(){return id;}
     
     public static class Builder{
        
       private  String complaint;
         private Long id;
 
+        public Builder(){}
         public Builder(String complaint){
            this.complaint = complaint;
         }

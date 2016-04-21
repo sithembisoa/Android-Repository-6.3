@@ -12,7 +12,8 @@ public class WaterBill implements Bills
     private Long id;
 
    public double getLitres(){return litres;}
-   
+   public Long getId(){return id;}
+   public void setLitres(double litres){this.litres = litres;}
    public double calculateBill(){return litres*19.23;}
    
    private WaterBill (Builder builder){

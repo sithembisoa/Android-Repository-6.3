@@ -1,7 +1,7 @@
 package com.example.athi.assignment7domain.factories;
 
-import com.example.athi.assignment7domain.domain.Account;
 import com.example.athi.assignment7domain.domain.Tenant;
+import com.example.athi.assignment7domain.domain.Account;
 
 /**
  * Write a description of class TenantFactory here.

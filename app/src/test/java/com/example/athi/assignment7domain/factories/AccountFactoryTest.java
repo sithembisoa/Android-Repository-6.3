@@ -3,10 +3,10 @@ package com.example.athi.assignment7domain.factories;
 /**
  * Created by 212160923 on 4/17/2016.
  */
-import com.example.athi.assignment7domain.domain.Account;
 import com.example.athi.assignment7domain.domain.ElectricityBill;
 import com.example.athi.assignment7domain.domain.ParkingBill;
 import com.example.athi.assignment7domain.domain.WaterBill;
+import com.example.athi.assignment7domain.domain.Account;
 
 import junit.framework.Assert;
 import org.junit.Test;

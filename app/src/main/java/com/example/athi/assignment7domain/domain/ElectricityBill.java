@@ -14,7 +14,9 @@ public class ElectricityBill implements Bills
    public double getWats(){return wats;}
    
    public double calculateBill(){return wats*9.23;}
-   
+
+   public void setWats(double wats){this.wats =wats;}
+   public Long getId(){return id;}
    private ElectricityBill (Builder builder){
        this.wats = builder.wats;
    }

@@ -13,6 +13,8 @@ public class ParkingBill implements Bills
     
    
    public int getDays(){return days;}
+   public Long getId(){return id;}
+   public void setDays(int days){this.days=days;}
    
    public double calculateBill(){return days*20.00;}
    
