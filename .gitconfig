@@ -1,0 +1,9 @@
+[user]
+ name = Athi Sithembiso
+  email = 212160923@mycput.ac.za
+  [core]
+   autocrlf = input
+   [http]
+    proxy = http://learn17:dante@155.238.4.87:3128
+    [https]
+     proxy = http://learn17:dante@155.238.4.87:3128

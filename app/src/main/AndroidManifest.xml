@@ -7,6 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name="com.example.athi.assignment7domain.conf.util.App"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -15,6 +16,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name=".services.tenant.Impl.TenantServiceImpl"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".services.tenant.Impl.TenantDeleteServiceImpl"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".services.tenant.Impl.TenantUpdateServiceImpl"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".services.management.Impl.TenantManagementServiceImpl"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".services.management.Impl.TenantManagementDeleteServiceImpl"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".services.management.Impl.TenantManagementUpdateServiceImpl"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>
