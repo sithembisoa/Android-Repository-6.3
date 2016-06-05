@@ -3,11 +3,11 @@
     package="com.example.athi.assignment7domain">
 
     <application
+        android:name=".conf.util.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name="com.example.athi.assignment7domain.conf.util.App"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".services.tenant.Impl.TenantServiceImpl"
             android:enabled="true"
@@ -40,6 +41,10 @@
             android:name=".services.management.Impl.TenantManagementUpdateServiceImpl"
             android:enabled="true"
             android:exported="false" />
+
+        <activity android:name=".AddTenant" />
+        <activity android:name=".PreviewTenant" />
+        <activity android:name=".DisplayAddedTenant"></activity>
     </application>
 
 </manifest>
