@@ -42,9 +42,27 @@
             android:enabled="true"
             android:exported="false" />
 
-        <activity android:name=".AddTenant" />
-        <activity android:name=".PreviewTenant" />
-        <activity android:name=".DisplayAddedTenant"></activity>
+        <activity android:name=".AddTenant" >
+            <intent-filter>
+                <action android:name="com.example.athi.assignment7domain.AddTenant" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PreviewTenant">
+            <intent-filter>
+                <action android:name="com.example.athi.assignment7domain.PreviewTenant" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DisplayAddedTenant">
+            <intent-filter>
+                <action android:name="com.example.athi.assignment7domain.DisplayAddedTenant" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
