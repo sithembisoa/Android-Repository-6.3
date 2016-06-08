@@ -26,6 +26,12 @@ public class PreviewTenant extends AppCompatActivity {
     private TextView accountT;
     private TextView balanceT;
 
+    String fname;
+    String lname;
+    String num;
+    String acc;
+    String bal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,19 +49,19 @@ public class PreviewTenant extends AppCompatActivity {
 
         if(b!=null)
         {
-            String fname = (String)b.get("firstName");
+            fname = (String)b.get("firstName");
             fName.setText(fname);
 
-            String lname =(String)b.get("lastName");
+            lname =(String)b.get("lastName");
             lName.setText(lname);
 
-            String num = (String)b.get("personID");
+             num = (String)b.get("personID");
             personIDT.setText(num);
 
-            String acc = (String)b.get("account");
+            acc = (String)b.get("account");
             accountT.setText(acc);
 
-            String bal = (String)b.get("balance");
+            bal = (String)b.get("balance");
             balanceT.setText(bal);
 
         }
@@ -65,23 +71,24 @@ public class PreviewTenant extends AppCompatActivity {
     public void btnSubmit(View view) throws InterruptedException {
 
         TenantTypeRepository repo = new TenantRepositoryImpl(this.getApplicationContext());
-        Account acc = new Account.Builder().accNo(accountT.toString())
-                                           .balance(Double.parseDouble(balanceT.toString()))
+
+        Account accnt = new Account.Builder().accNo(acc)
+                                           .balance(Double.parseDouble(bal))
                                            .electricityBill(elec)
                                            .parking(park)
                                            .waterBill(water)
                                            .build();
 
         Tenant createEntity = new Tenant.Builder()
-                .idNumber(personIDT.toString())
-                .account(acc)
-                .fullName(fName.toString()+" "+lName.toString())
+                .idNumber(num)
+                .account(accnt)
+                .fullName(fname+" "+lname)
                 .build();
 
-        repo.save(createEntity);
+        Tenant inserted = repo.save(createEntity);
 
-        //Intent intent = new Intent(this, DisplayAddedTenant.class);
+        Intent intent = new Intent(this, DisplayAddedTenant.class);
 
-        //startActivity(intent);
+        startActivity(intent);
     }
 }
